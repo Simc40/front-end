@@ -1,0 +1,94 @@
+.container{
+    max-width: 100%!important;
+    width: 100%!important;
+    height: 100%;
+    padding: 0!important;
+    margin: 0!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+        min-width: 400px;
+        border-radius: 15px;
+        margin: 20px!important;
+        padding: auto;
+        background-color: white;
+        border: 2px solid #E6E6E6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        .d-flex.flex-column.align-items-stretch.flex-shrink-0.bg-white{
+            min-width: 300px;
+        }
+
+        .list-group-item.list-group-item-action.py-3.lh-sm:hover{
+            cursor: pointer;
+        }
+
+        main {
+            height: 100vh;
+            height: -webkit-fill-available;
+            max-height: 100vh;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+        
+        .dropdown-toggle { outline: 0; }
+        
+        .btn-toggle {
+            padding: .25rem .5rem;
+            font-weight: 600;
+            color: rgba(0, 0, 0, .65);
+            background-color: transparent;
+        }
+        .btn-toggle:hover,
+        .btn-toggle:focus {
+            color: rgba(0, 0, 0, .85);
+            background-color: #d2f4ea;
+        }
+        
+        .btn-toggle::before {
+            width: 1.25em;
+            line-height: 0;
+            content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+            transition: transform .35s ease;
+            transform-origin: .5em 50%;
+        }
+        
+        .btn-toggle[aria-expanded="true"] {
+            color: rgba(0, 0, 0, .85);
+        }
+        .btn-toggle[aria-expanded="true"]::before {
+            transform: rotate(90deg);
+        }
+        
+        .btn-toggle-nav a {
+            padding: .1875rem .5rem;
+            margin-top: .125rem;
+            margin-left: 1.25rem;
+        }
+        .btn-toggle-nav a:hover,
+        .btn-toggle-nav a:focus {
+            background-color: #d2f4ea;
+        }
+        
+        .scrollarea {
+            overflow-y: auto;
+        }
+        
+        img{
+            width: 80px!important;
+            aspect-ratio: auto!important;
+            height: auto!important;
+        }
+        
+        .list-group{
+            --bs-list-group-action-hover-bg: #e9ecef;
+        
+        }
+    }
+}
+

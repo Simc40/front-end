@@ -1,0 +1,147 @@
+/* Add a black background color to the top navigation */
+
+@media screen and (max-width: 480px){
+    .topnav .brandAndLogos{
+        img{
+            vertical-align: baseline;
+        }
+
+        .topnav-text{
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .topnav .brandAndLogos{
+        img{
+            vertical-align: baseline;
+        }
+
+        .topnav-path{
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .topnav .brandAndLogos{
+        img{
+            vertical-align: baseline;
+        }
+    }
+}
+
+@media screen and (min-width: 1025px){
+    .topnav .brandAndLogos{
+        .material-icons{
+            display: none;
+        }
+    }
+}
+
+$topnavHeight:8vh;
+
+.topnav {
+    display: flex;
+    height: $topnavHeight;
+    z-index:6;
+    box-shadow: 5px 0 5px 2px #888;
+    width: 100vw;
+    background-color: #F2F2F2;
+    overflow: hidden;
+    position: fixed;
+    border-bottom: 1px solid #000000;
+
+    .brandAndLogos{
+        flex: 4;
+        min-width: 70%;
+        display: flex;
+        align-items: center;
+
+        .topnav-brand{
+            display: flex;
+            align-items: center;
+        }
+
+        .material-icons{
+            color: black;
+            padding: 0px 20px;
+        }
+
+        .material-icons:hover{
+            cursor: pointer;
+            color: #888;
+        }
+        
+        a {
+            float: left;
+            padding: 0px 16px;
+            text-decoration: none;
+        }
+
+        .topnav-text {
+            color: #000000;
+        }
+
+        .topnav-img{
+            height: 5vh;
+            padding: 0px 16px;
+            object-fit: contain;
+        }
+
+        a.topnav-text.cliente{
+            padding-left: 0px;
+        }
+        
+        .topnav-text.path{
+            white-space: nowrap;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .topnav-path{
+            font-size: 14px;
+            white-space: nowrap;
+        }
+    }
+
+    .userDropdown{
+        flex:1;
+        max-width: 200px;
+        align-self: center;
+
+        a {
+            float: right;
+            text-align: center;
+            padding: 0px 16px;
+            font-size: 17px;
+        }
+
+        li a{
+            padding: 10px 16px;
+        }
+
+        #dropdown-menu{
+            list-style-type: none;
+            position: fixed;
+            background: #a8cf45;
+            top: calc(#{$topnavHeight} - 1px);
+            right: 0%;
+        }
+        
+        #dropdownUser1{
+            color:#000000;
+        }
+        
+        #dropdownUser1:hover{
+            color:#a8cf45;
+        }
+        
+        img#user-image{
+            height: 5vh;
+            object-fit: contain;
+        }
+    }
+}
+

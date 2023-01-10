@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20221116T184500Z
+DTEND:20221116T193000Z
+DTSTAMP:20221116T101215Z
+ORGANIZER;CN=Recrutamento:mailto:nave.rs_3bh6gn84jmhgtppm06dpeb236g@group.c
+ alendar.google.com
+UID:0du425b0smkfc6jd94i2hraeho@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=julioclopes32@gmail.com;X-NUM-GUESTS=0:mailto:julioclopes32@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=renata.silva@nav9.tech;X-NUM-GUESTS=0:mailto:renata.silva@nav9.tech
+X-MICROSOFT-CDO-OWNERAPPTID:54843029
+CREATED:20221110T214521Z
+DESCRIPTION:Booking page: Nave.rs\nDuration: 45 minutos\nBooking reference:
+  DXAJ-FXVN-AZIJ\n\nFirst name: Julio\nLast name: Cesar\nEmail: julioclopes3
+ 2@gmail.com\nVocê gostaria de marcar: Reunião de Cultura - Terceira etapa\n
+ \n\nCreate your free account today at <a href="https://youcanbook.me/get-st
+ arted">YouCanBook.me/get-started</a>\n\n\nYCBM link ref: 282a8e64-d1e1-4eea
+ -8fef-848d52a06327\n
+LAST-MODIFIED:20221116T101213Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Julio | Cultura | Back-end
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
