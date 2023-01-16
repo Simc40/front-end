@@ -7,7 +7,9 @@
 //     font-family: ArtifaktElement;
 // }
 
-#header, #preview, #overlay {
+#header,
+#preview,
+#overlay {
     // position: absolute;
     width: 100%;
 }
@@ -20,15 +22,73 @@
     align-items: center;
 }
 
-#preview, #overlay {
+#preview,
+#overlay {
+    top: 3em;
+    bottom: 0;
+}
+
+#header2,
+#preview2,
+#overlay2 {
+    // position: absolute;
+    width: 100%;
+}
+
+#header2 {
+    height: 3em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#preview2,
+#overlay2 {
     top: 3em;
     bottom: 0;
 }
 
 #preview {
-    .adsk-viewing-viewer.notouch.quality-text.light-theme{
-        width: 85%!important;
-        height: 60vh!important;
+    .adsk-viewing-viewer.notouch.quality-text.light-theme {
+        width: 85% !important;
+        height: 60vh !important;
+    }
+}
+
+.right {
+    #preview {
+        .adsk-viewing-viewer.notouch.quality-text.light-theme {
+            width: 43% !important;
+            height: 60vh !important;
+        }
+    }
+}
+
+.dashboard {
+    #preview {
+        .adsk-viewing-viewer.notouch.quality-text.light-theme {
+            width: 43% !important;
+            height: 40vh !important;
+        }
+    }
+}
+
+.mounting.left {
+    #preview {
+        .adsk-viewing-viewer.notouch.quality-text.light-theme {
+            width: 43% !important;
+            height: 40vh !important;
+        }
+    }
+}
+
+.mounting.right {
+    #preview2 {
+        .adsk-viewing-viewer.notouch.quality-text.light-theme {
+            width: 43% !important;
+            height: 40vh !important;
+        }
     }
 }
 
@@ -59,6 +119,37 @@
 }
 
 #models {
+    flex: 0 1 auto;
+    min-width: 2em;
+}
+
+#overlay2 {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    display: none;
+}
+
+#overlay2 > .notification {
+    margin: auto;
+    padding: 1em;
+    max-width: 50%;
+    background: white;
+}
+
+#header2 > * {
+    height: 2em;
+    margin: 0 0.5em;
+    font-size: 1em;
+    font-family: ArtifaktElement;
+}
+
+#header2 .title {
+    flex: 1 0 auto;
+    height: auto;
+}
+
+#models2 {
     flex: 0 1 auto;
     min-width: 2em;
 }

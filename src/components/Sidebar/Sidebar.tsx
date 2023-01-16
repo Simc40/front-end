@@ -257,7 +257,7 @@ const Sidebar = ({
                                 toggle={sidebarVisibility}
                             />
                             <SidebarLink
-                                link={"/relatorios-montagem"}
+                                link={"/relatorios/montagem"}
                                 text={"Montagem"}
                                 icon={"extension"}
                                 toggle={sidebarVisibility}

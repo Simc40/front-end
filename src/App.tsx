@@ -25,7 +25,8 @@ import { UserAccess } from "./pages/Users/UserAccess";
 import { PdfsConstruction } from "./pages/PdfConstruction/PdfsConstruction";
 import { PdfsElement } from "./pages/PdfElement/PdfsElement";
 import { BIM } from "./pages/BIM/BIM";
-import { Planning } from "./pages/PlanningBIM/Planning";
+import { Planning } from "./pages/Planning/Planning";
+import { ReportMonting } from "./pages/ReportMonting/ReportMonting";
 
 interface AppState {
     isLoaded: boolean;
@@ -231,14 +232,21 @@ export class App extends React.Component<{}, AppState> {
                     }
                 ></Route>
                 <Route
-                    path="/programacao/planejamento"
+                    path="/programacao/:planejamento"
                     element={
                         <RequireAuth>
                             <Planning />
                         </RequireAuth>
                     }
                 ></Route>
-
+                <Route
+                    path="/relatorios/montagem"
+                    element={
+                        <RequireAuth>
+                            <ReportMonting />
+                        </RequireAuth>
+                    }
+                ></Route>
                 {/* <Route path="*" element={<RequireAuth><NotFound/></RequireAuth>}></Route> */}
             </Routes>
         );

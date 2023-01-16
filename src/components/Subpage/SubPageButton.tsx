@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 import { useNavigate } from "react-router";
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const DivSubPageButton = styled.div`
     margin-right: 10px;
@@ -9,8 +9,8 @@ const DivSubPageButton = styled.div`
     margin-top: 1px;
     margin-left: 1px;
 
-    &.adjust-font{
-        @media screen and (max-width: 550px){
+    &.adjust-font {
+        @media screen and (max-width: 550px) {
             font-size: 10px;
             max-width: 40%;
         }
@@ -38,26 +38,51 @@ const SpanSelectedSubPageButton = styled.span`
     color: rgb(87, 166, 149);
     font-weight: bold;
     box-shadow: rgb(136 136 136) 0px 0px 1px 1px;
-    
-    &.adjust-font{
-        @media screen and (max-width: 550px){
+
+    &.adjust-font {
+        @media screen and (max-width: 550px) {
             white-space: break-spaces;
             text-align: center;
         }
     }
 `;
 
-export const SubPageButton = ({text, path, selected, fontSize}: {fontSize?:string, text:string | JSX.Element, path?:string, selected?: boolean}) => {
-
+export const SubPageButton = ({
+    text,
+    path,
+    selected,
+    fontSize,
+    onClick,
+    id,
+}: {
+    fontSize?: string;
+    text: string | JSX.Element;
+    path?: string;
+    selected?: boolean;
+    onClick?: any;
+    id?: string;
+}) => {
     const navigate = useNavigate();
 
     const goTo = () => {
-        if(path !== undefined) navigate(path)
-    }
+        if (path !== undefined) navigate(path);
+    };
 
     return (
         <DivSubPageButton onClick={goTo} className={fontSize}>
-            {(selected) ? <SpanSelectedSubPageButton className={fontSize}>{text}</SpanSelectedSubPageButton> : <SpanSubPageButton>{text}</SpanSubPageButton>}
+            {selected ? (
+                <SpanSelectedSubPageButton
+                    className={fontSize}
+                    onClick={onClick}
+                    id={id}
+                >
+                    {text}
+                </SpanSelectedSubPageButton>
+            ) : (
+                <SpanSubPageButton onClick={onClick} id={id}>
+                    {text}
+                </SpanSubPageButton>
+            )}
         </DivSubPageButton>
-    )
-}
+    );
+};
